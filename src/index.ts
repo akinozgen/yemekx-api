@@ -49,3 +49,4 @@ app.get("/menus/:city/:region/:SeoUrl", async (req, res) => {
 });
 
 app.listen(PORT, _ => console.dir(`Listening On: ${PORT}`));
+app.set("timeout", 500000);
