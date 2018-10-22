@@ -1,7 +1,35 @@
 {
-  "name": "yemekx-api",
+  "name": "yemekx-a",
+  "version": "1.0.0",
   "description": "yemekx-api heroku port",
-  "repository": "git@heroku.com:yemekx-api.git",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "engines": {
+    "node": "10.11.0"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "@types/express": "^4.11.1",
+    "cors": "^2.8.4",
+    "decode-html": "^2.0.0",
+    "express": "^4.16.3",
+    "fetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }

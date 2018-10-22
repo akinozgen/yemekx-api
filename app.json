@@ -1,0 +1,7 @@
+{
+  "name": "yemekx-api",
+  "description": "yemekx-api heroku port",
+  "repository": "git@heroku.com:yemekx-api.git",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

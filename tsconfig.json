@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es6"
+    ],
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "target": "es6",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "./src/types/*"
+      ]
+    }
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}
