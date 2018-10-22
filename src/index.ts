@@ -5,6 +5,7 @@ import { getRegions } from "./providers/regionprovider";
 import { getRestaurants } from "./providers/restaurantprovider";
 import { getMenus } from "./providers/menuprovider";
 import { IRestaurant, IRegion, ICity } from "./types";
+const PORT = process.env.PORT || 5000;
 
 const app: express.Application = express();
 
@@ -47,4 +48,4 @@ app.get("/menus/:city/:region/:SeoUrl", async (req, res) => {
   res.send(menus);
 });
 
-app.listen(8080, _ => console.dir(`Listening On: 80`));
+app.listen(PORT, _ => console.dir(`Listening On: ${PORT}`));
