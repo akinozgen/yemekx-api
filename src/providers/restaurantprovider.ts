@@ -1,11 +1,11 @@
-import * as decode from 'decode-html';
-import { fetchUrl } from 'fetch';
-import { IRegion, IRestaurant } from '../types';
+import * as decode from "decode-html";
+import { fetchUrl } from "fetch";
+import { IRegion, IRestaurant } from "../types";
 
 export function getRestaurants(region: IRegion): Promise<IRestaurant[]> {
   return new Promise((resolve, reject) => {
     fetchUrl(
-      `http://yemeksepeti.com/${region.city.key}/${region.key}`,
+      `https://yemekx-api.herokuapp.com/${region.city.key}/${region.key}`,
       (err: any, meta: any, body: Buffer) => {
         if (err) {
           reject(err);
@@ -19,8 +19,8 @@ export function getRestaurants(region: IRegion): Promise<IRestaurant[]> {
             return JSON.parse(
               decode(
                 restauranData
-                  .replace('<span data-tooltip="', '')
-                  .replace('">', '')
+                  .replace('<span data-tooltip="', "")
+                  .replace('">', "")
               )
             );
           });
